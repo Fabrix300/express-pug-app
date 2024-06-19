@@ -1,0 +1,15 @@
+// src/views/users/new.pug
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title New User
+  body
+    form(action="/users", method="POST")
+      label First name:&nbsp;
+        input(type="text", name="firstName", value=firstName)
+      button(type="submit") Submit
+    unless !error
+      p(style="color: red;") #{error}
